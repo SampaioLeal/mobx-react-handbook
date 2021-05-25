@@ -118,7 +118,8 @@ Como havia citado anteriormente: _"as alterações feitas nessas propriedades ge
 
 Isso quer dizer que para um componente reagir as alterações de estado, devem ser encapsulados por uma função/HOC `observer`.
 
-`observer<P>(baseComponent: FunctionComponent<P>): FunctionComponent<P>`
+### `observer<P>(baseComponent: FunctionComponent<P>): FunctionComponent<P>`
+
 "The observer converts a component into a reactive component, which tracks which observables are used automatically and re-renders the component when one of these values changes. Can only be used for function components. For class component support see the mobx-react package."
 "The observer HoC automatically subscribes React components to any observables that are used during rendering. As a result, components will automatically re-render when relevant observables change. It also makes sure that components don't re-render when there are no relevant changes. So, observables that are accessible by the component, but not actually read, won't ever cause a re-render."
 
