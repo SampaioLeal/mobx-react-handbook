@@ -113,7 +113,7 @@ Agora vamos atrelar ao nosso botão a responsabilidade de incrementar o contador
 {...}
 ```
 
-Não aconteceu nada ao clicar no botão? Será que de bug?
+Não aconteceu nada ao clicar no botão? Será que deu bug?
 Como havia citado anteriormente: _"as alterações feitas nessas propriedades geram reatividade para os componentes que estão utilizando-as e que **estão aptos para reagir** a essas mudanças"_.
 
 Isso quer dizer que para um componente reagir as alterações de estado, devem ser encapsulados por uma função/HOC `observer`.
