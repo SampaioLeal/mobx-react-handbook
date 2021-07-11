@@ -1,28 +1,27 @@
 import logo from "./logo.svg";
 import "./App.css";
-import rootStore from "./stores/root";
-import { observer } from "mobx-react-lite";
+import Wrapper from "./Wrapper";
+import Counter from "./Counter";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <Wrapper>
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
 
-        <p>Counter: {rootStore.counter}</p>
-        <button onClick={rootStore.incrementCounter}>Increment Counter</button>
+          <Counter />
 
-        <a
-          className="App-link"
-          href="https://mobx.js.org/README.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn MobX
-        </a>
-      </header>
-    </div>
+          <a
+            className="App-link"
+            href="https://mobx.js.org/README.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn MobX
+          </a>
+        </header>
+      </div>
+    </Wrapper>
   );
 }
-
-export default observer(App);
